@@ -1,8 +1,11 @@
 import discord
 import random
 from discord.ext import commands
+from dotenv import dotenv_values
 
-token = 'OTI0NTU0NjY5NDEyNDYyNjMy.YcgQog.6P3a3hDuEfIoTlJkb-i-RUqvSA8'
+config = dotenv_values()
+
+TOKEN = config["TOKEN"]
 
 
 client = commands.Bot (command_prefix = ".")
@@ -71,4 +74,4 @@ async def help(ctx):
 
 
 
-client.run(token)
+client.run(TOKEN)
